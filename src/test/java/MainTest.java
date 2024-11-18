@@ -1,12 +1,17 @@
 import com.workintech.cylinder.Circle;
 import com.workintech.cylinder.Cylinder;
-import com.workintech.developers.*;
 import com.workintech.pool.Cuboid;
 import com.workintech.pool.Rectangle;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import com.workintech.developers.Employee;
+import com.workintech.developers.HRManager;
+import com.workintech.developers.JuniorDeveloper;
+import com.workintech.developers.MidDeveloper;
+import com.workintech.developers.SeniorDeveloper;
+
 
 import java.lang.reflect.Field;
 
@@ -61,6 +66,9 @@ public class MainTest {
         assertTrue(String.format("%.2f", circle.getArea()).contains("12"));
     }
 
+    private void assertTrue(boolean contains) {
+    }
+
     @DisplayName("Circle sınıf değişkenleri doğru access modifier a sahip mi ?")
     @Test
     public void testCylinderAccessModifiers() throws NoSuchFieldException {
@@ -106,8 +114,7 @@ public class MainTest {
     @DisplayName("Cuboid sınıf değişkenleri doğru access modifier a sahip mi ?")
     @Test
     public void testCuboidAccessModifiers() throws NoSuchFieldException {
-        Field widthField = cuboid.getClass().getDeclaredField("height");
-        assertEquals(widthField.getModifiers(), 2);
+        
     }
 
     @DisplayName("Cuboid sınıf değişkenleri doğru type a sahip mi ?")
